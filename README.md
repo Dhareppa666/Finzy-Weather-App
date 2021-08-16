@@ -23,12 +23,6 @@ The website should have a listing page where all the four cities are listed with
 # First steps
 Make a API call to backend service to fetch the current weather by providing required details like city name or city id. The data will be fetched from MongoDB. Note, that 4 cities are initialized on setting up the context.
 
-# Limitations (and possible improvements)
-->If a city is removed all weather data for the city is removed as well and no more weather data will be queried for it.
-->All weather data is fetched by city name (vs. city id, which the API also supports). For this reason bulk requests are currently not used although some parts of it have been implemented (see the javadoc for comments on what changes would be necessary).
-->Detailed error handling and handling of invalid/faulty data from the API is not implemented! What is handled are invalid city names.
-->Unit tests need to be extended!
-
 # Implemented Features In Detail : 
 1. *At initial state of Application since we dont have any data on the DB, we schedule a job to update the DB with respective Details.
 2. *By taking the city names from the Configuration/json file we fetch the weather data from the OpenWeatherMap for all the cities and upadte the DB with 5 days weather.
@@ -37,3 +31,6 @@ Make a API call to backend service to fetch the current weather by providing req
 5. *Since we are only making calls to DB and rest Calls its doesn't require much of Error handling at priority Level. But basic validation is added in the code like while fetching city name and all.
 6. *Unit Test cases needs to be addressed.
 
+# Endpoints available:
+1. LB_CHECK (/api/LB_CHECK)
+2. Fetch weather by city name (/api/city/{cityname})
