@@ -11,14 +11,14 @@ Built an Backend Application where users can see the weather for one of the foll
 The website should have a listing page where all the four cities are listed with their current weather conditions. A details page should also be made accessible where each city’s 5 days forecasted weather is available to view.  The weather data can be accessed using OpenWeatherMaps. They provide an API free of cost here.  As the number of calls that can be made to OpenWeatherMaps API is limited in the free version and the weather gets updated every couple of hours, the data once fetched should be cached for a configurable amount of time so that the weather data is always available to the users of our website. 
 
 # Requirements
-Java 1.8
-Spring Boot
-Mongo DB
-OpenWeather API-Key
+* Java 1.8
+* Spring Boot
+* Mongo DB
+* OpenWeather API-Key
 
 # Implemented features:
-5 days Data / 3-hour forecast
-Current weather data
+* 5 days Data / 3-hour forecast
+* Current weather data
 
 # First steps
 Make a API call to backend service to fetch the current weather by providing required details like city name or city id. The data will be fetched from MongoDB. Note, that 4 cities are initialized on setting up the context.
